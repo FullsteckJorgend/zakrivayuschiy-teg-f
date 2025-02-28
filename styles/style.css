@@ -53,7 +53,6 @@
 
 .text_header {
   font-size: var(--PressStart-size_text);
-  font-variation-settings: var(--normal-wight-font);
 }
 /*-header-*/
 
@@ -112,6 +111,7 @@
 
 .text_card {
   font-size: 18px;
+  font-variation-settings: var(--normal-wight-font);
   padding-left: var(--padding-left__text_card);
   padding-right: var(--padding-right__text_card);
 }
