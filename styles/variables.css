@@ -29,7 +29,7 @@
   --gap__dialog__content: 14px;
   /*-standart styles-*/
 }
-/* Я понимаю, что очень сильно нафрякал, но если бы не @media (min-width: 320px), было бы строк 40, а не столько. */
+/* Я понимаю, что очень сильно нафрякал, но если бы не @media (min-width: 320px), было бы строк 40, а не столько */
 @media (min-width: 320px) {
   :root {
     --padding-inline__title_card: 10px;
