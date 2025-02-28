@@ -1,27 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  /* fonts */
   --Inter: "Inter-Variable", sans-serif;
   --PressStart2P: "PressStart2P", sans-serif;
-  --wight-font: 400;
-  /* -fonts- */
-  /* size */
+  --wight-font: wght 400;
+  --bold-wight-font: wght 700;
   --PressStart-size_header: clamp(2rem, -9.636rem + 58.182vw, 4rem);
   --PressStart-size_text: clamp(1rem, -4.818rem + 29.091vw, 2rem);
   --min-block-size__header: clamp(20rem, 0rem + 100vw, 23.438rem);
   --min-inline-size__header: clamp(20rem, 0rem + 100vw, 23.438rem);
-  /* -size- */
-  /* colors */
   --main-color: #fff;
-  /* heart */
   --contour-color: #000;
   --filling-color: red;
-  /* -heart- */
-  /* -colors- */
-  /*standart styles*/
   --inline-size__svg_footer: 28px;
   --padding-block-start__footer: 51px;
-
   --inline-size: clamp(20rem, 0rem + 100vw, 23.438rem);
   --flex-direction__footer: column;
   --padding-left__text_card: 25px;
@@ -29,7 +20,6 @@
   --margin-top__text_cardFirst-of-type: 25px;
   --padding-inline__dialog__content: 42px;
   --gap__dialog__content: 14px;
-  /*-standart styles-*/
 }
 /* Я понимаю, что очень сильно нафрякал, но если бы не @media (min-width: 320px), было бы строк 40, а не столько. */
 @media (min-width: 320px) {

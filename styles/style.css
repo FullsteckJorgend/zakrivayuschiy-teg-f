@@ -3,7 +3,7 @@
   text-transform: uppercase;
 }
 
-.rezina_inline {
+.rubber_inline {
   inline-size: var(--inline-size);
   max-inline-size: 700px;
 } /*изменить с .rezina-inline на что-то на инглиш*/
@@ -15,7 +15,7 @@
   min-block-size: 100dvb;
   display: flex;
   flex-direction: column;
-
+  font-variation-settings: var(--bold-wight-font);
   align-items: center;
   max-block-size: 100vh;
   background-color: #fff;
@@ -53,6 +53,7 @@
 
 .text_header {
   font-size: var(--PressStart-size_text);
+  font-variation-settings: var(--normal-wight-font);
 }
 /*-header-*/
 
@@ -425,7 +426,6 @@ dialog::backdrop {
 
 .dialog[open] .dialog__title {
   font-family: var(--PressStart2P);
-  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
 }
@@ -438,7 +438,6 @@ dialog::backdrop {
 .dialog[open] .dialog__button span {
   cursor: pointer;
   font-family: var(--PressStart2P);
-  font-weight: 400;
   font-size: 14px;
   line-height: 12.6px;
 }
