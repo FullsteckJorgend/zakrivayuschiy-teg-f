@@ -9,8 +9,448 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+/*paterns*/
+.up_text {
+  text-transform: uppercase;
+}
+
+.rezina_inline {
+  inline-size: var(--inline-size);
+  max-inline-size: 700px;
+} /*изменить с .rezina-inline на что-то на инглиш*/
+
+/*-paterns-*/
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-block-size: 100vh;
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(0deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0%, #e7e7e7 0.1%, #1a1a1a 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+/*header*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--PressStart2P);
+  background-color: white;
+  border: 2px solid black;
+  margin-block: var(--margin-block_header);
+  gap: 20px;
+  min-block-size: var(--min-block-size__header);
+  min-inline-size: var(--min-inline-size__header);
+}
+
+.title_header {
+  font-size: var(--PressStart-size_header);
+}
+
+.text_header {
+  font-size: var(--PressStart-size_text);
+}
+/*-header-*/
+
+/*main*/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*card*/
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+/*Иза ошибки дизайна пришлось заниматся этой херью, комон, почему так много ошибок в дизайне!?!?!*/
+.mg-b-s {
+  margin-block-start: 1px;
+}
+
+.mg-b-s2 {
+  margin-block-start: 2px;
+}
+/*Иза ошибки дизайна пришлось заниматся этой херью, комон, почему так много ошибок в дизайне!?!?!*/
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--Inter);
+  border: 2px solid #000;
+  max-width: 696px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.title_card {
+  font-family: var(--Inter);
+  font-weight: bold;
+  font-size: 18px;
+
+  align-self: flex-start;
+  line-height: 21.5px; /*line-block нету:)*/
+  padding-block: 5px;
+  padding-inline: var(--padding-inline__title_card);
+}
+
+.canteiner-text_card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap__canteiner-text_card);
+}
+
+.text_card {
+  font-size: 18px;
+  padding-left: var(--padding-left__text_card);
+  padding-right: var(--padding-right__text_card);
+}
+
+.text_card:first-of-type {
+  margin-top: var(--margin-top__text_cardFirst-of-type);
+}
+/*img*/
+
+.canteiner-img {
+  align-self: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid black;
+  inline-size: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
+  block-size: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
+}
+
+.img {
+  align-self: center;
+  inline-size: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
+  block-size: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.text_img {
+  position: absolute;
+  font-family: var(--PressStart2P);
+  font-size: 14px;
+  text-shadow: 0px 0px 3px #fff;
+  right: var(--right__text_img);
+  top: 25px;
+  mix-blend-mode: hard-light;
+  opacity: 0.7;
+}
+
+@supports (-webkit-text-stroke: 0.26px #fff) or (text-stroke: 0.26px #fff) {
+  .text_img {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+
+    text-stroke: 1px #fff;
+  }
+}
+
+.grayscale {
+  filter: grayscale(0.7);
+}
+
+.saturate {
+  filter: saturate(4);
+}
+
+.hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.invert {
+  filter: invert(0.8);
+}
+
+.sepia {
+  filter: sepia(0.9);
+}
+
+.blur {
+  filter: blur(5px);
+}
+/*я не уверен что там такой фильтер, приблизился к этолону максимально*/
+.hue-rotate__ {
+  filter: hue-rotate(30deg) blur(1px);
+}
+/*-img-*/
+
+/*button*/
+/*(гемор)*/
+
+.canteiner_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap__canteiner_button);
+  padding-block: 25.6px;
+  margin-right: 25px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  background-color: #fff;
+  border: 2px solid black;
+  font-family: var(--PressStart2P);
+  position: relative;
+  transition: box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.button span {
+  z-index: 2;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transform-origin: left;
+  transition: translate 0.5s ease-in-out;
+  translate: -100%;
+}
+
+.button:hover::before {
+  translate: 0%;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 black;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  /* width: 39px;  */
+  /*зачем здесь логика??? и так сойдет */
+  height: 35px;
+  outline: none;
+  transition: outline 0.3s ease;
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid black;
+}
+
+/* анимашка сирдешка */
+.sparks {
+  opacity: 0;
+}
+
+.main-body,
+.core {
+  fill: transparent;
+}
+
+/* hover */
+.card__icon-button:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:not(:hover) .core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+/* -hover- */
+/* active */
+.card__icon-button:active .main-body {
+  fill: var(--filling-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--filling-color);
+  transition: fill 0.3s linear;
+}
+/* -active- */
+/* click */
+.like-icon.is-liked .main-body {
+  fill: var(--filling-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--filling-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--filling-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.is-liked .heart {
+  transform-origin: center;
+  animation: like 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: opacity 0.3s ease-in 0.3s;
+}
+/* -click- */
+/* -анимашка сирдешка- */
+
+.button__text {
+  font-size: 14px;
+  line-height: 12.6px;
+}
+
+.card__like-button {
+  background-color: transparent;
+  /* padding: 12px 35px 7px 35px; */
+  inline-size: 130px;
+  block-size: 35px;
+  box-shadow: 0px 0px 0px 0px #000;
+  transition: box-shadow 0.3s;
+}
+
+.like-icon {
+  width: 36px;
+  height: 35px;
+}
+/*-(гемор)-*/
+/*-button-*/
+/*-card-*/
+/*-main-*/
+
+/*footer*/
+
+.footer {
+  padding-block-start: var(--padding-block-start__footer);
+  padding-block-end: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--flex-direction__footer); /*flex-direction__footer*/
+}
+
+.button_footer {
+  flex-direction: var(--flex-direction__footer);
+  gap: 7px;
+  border: 2px solid black;
+  box-shadow: 0px 0px 0px 0px #000;
+  padding-inline: 20px;
+  padding-block: 16px;
+}
+
+.svg_footer {
+  inline-size: var(--inline-size__svg_footer);
+  z-index: 2;
+  color: var(--main-color);
+  mix-blend-mode: difference;
+}
+
+.text_footer {
+  font-size: 14px;
+  line-height: 16.5px;
+}
+/*-footer-*/
+/*dialog*/
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: clamp(21.313rem, 16.949rem + 21.818vw, 22.063rem);
+  height: 191px;
+  padding: 30px var(--padding-inline__dialog__content);
+  border: 2px solid black;
+  background-color: white;
+}
+
+body:has(.dialog[open]) {
+  overflow: hidden;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.25);
+}
+
+.dialog[open] .dialog__icon {
+  flex-grow: 1;
+  inline-size: 39px;
+  margin-block: 12px;
+}
+
+.dialog[open] .dialog__content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap__dialog__content);
+  background-color: white;
+}
+
+.dialog[open] .dialog__title {
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.dialog[open] .dialog__button {
+  inline-size: (16.063rem, 2.972rem + 65.455vw, 18.313rem);
+  block-size: 38px;
+}
+
+.dialog[open] .dialog__button span {
+  cursor: pointer;
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+}
+/*-dialog-*/

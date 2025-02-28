@@ -1,1 +1,72 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* fonts */
+  --Inter: "Inter", sans-serif;
+  --PressStart2P: "PressStart2P", sans-serif;
+  /* -fonts- */
+  /* size */
+  --PressStart-size_header: clamp(2rem, -9.636rem + 58.182vw, 4rem);
+  --PressStart-size_text: clamp(1rem, -4.818rem + 29.091vw, 2rem);
+  /* -size- */
+  /* colors */
+  --main-color: #fff;
+  /* heart */
+  --contour-color: #000;
+  --filling-color: red;
+  /* -heart- */
+  /* -colors- */
+
+  /*standart styles*/
+  --inline-size__svg_footer: 28px;
+  --padding-block-start__footer: 51px;
+  --min-block-size__header: clamp(20rem, 0rem + 100vw, 23.438rem);
+  --min-inline-size__header: clamp(20rem, 0rem + 100vw, 23.438rem);
+  --inline-size: clamp(20rem, 0rem + 100vw, 23.438rem);
+  --flex-direction__footer: column;
+  --padding-left__text_card: 25px;
+  --padding-right__text_card: 25px;
+  --margin-top__text_cardFirst-of-type: 25px;
+
+  --padding-inline__dialog__content: 42px;
+  --gap__dialog__content: 14px;
+  /*-standart styles-*/
+}
+
+@media (min-width: 320px) {
+  :root {
+    --padding-inline__title_card: 10px;
+    --gap__canteiner_button: 10px;
+    --margin-block_header: 98px;
+    --right__text_img: clamp(1.813rem, 0.548rem + 1.127vw, 1.563rem);
+  }
+}
+
+@media (min-width: 375px) {
+  :root {
+    --inline-size: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
+    --gap__canteiner-text_card: 27px;
+    --min-block-size__header: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
+    --min-inline-size__header: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
+    --gap__canteiner_button: 8px;
+    --right__text_img: clamp(0.813rem, 0.548rem + 1.127vw, 1.563rem);
+    --PressStart-size_header: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --PressStart-size_text: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --margin-block_header: 102px;
+    --flex-direction__footer: row;
+    --padding-inline__title_card: 8px;
+    --margin-top__text_cardFirst-of-type: 30px;
+    --gap__canteiner-text_card: 26px;
+    --padding-inline__dialog__content: 30px;
+    --padding-left__text_card: 22px;
+    --padding-right__text_card: 24px;
+    --gap__canteiner_button: 5.5px;
+    --inline-size__svg_footer: 21px;
+    --padding-block-start__footer: 50px;
+    --gap__dialog__content: 20px;
+  }
+}
