@@ -113,6 +113,7 @@
 
 .text_card {
   font-size: 18px;
+  line-height: 21px;
   font-variation-settings: "wght" 400;
   padding-left: var(--padding-left__text_card);
   padding-right: var(--padding-right__text_card);
@@ -175,7 +176,7 @@
 }
 
 .invert {
-  filter: invert(0.8);
+  filter: invert(1);
 }
 
 .sepia {
@@ -188,6 +189,10 @@
 /*я не уверен что там такой фильтер, приблизился к этолону максимально*/
 .hue-rotate__ {
   filter: hue-rotate(30deg) blur(1px);
+}
+
+.canteiner-img:has(.invert) .img {
+  border: 2px solid white;
 }
 /*-img-*/
 
