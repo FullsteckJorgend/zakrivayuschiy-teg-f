@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --Inter: "Inter-Variable", sans-serif;
-  --PressStart2P: "PressStart2P", sans-serif;
+  --main-font: "Inter-Variable", sans-serif;
+  --decorative-font: "PressStart2P", sans-serif;
   --PressStart-size_header: clamp(2rem, -9.636rem + 58.182vw, 4rem);
   --PressStart-size_text: clamp(1rem, -4.818rem + 29.091vw, 2rem);
   --min-block-size__header: clamp(20rem, 0rem + 100vw, 23.438rem);

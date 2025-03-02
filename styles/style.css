@@ -38,12 +38,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: var(--PressStart2P);
+  font-family: var(--decorative-font);
   background-color: white;
   border: 2px solid black;
   margin-block: var(--margin-block_header);
   gap: 20px;
-  min-block-size: var(--min-block-size__header);
+  padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  /* min-block-size: var(--min-block-size__header); */
   min-inline-size: var(--min-inline-size__header);
 }
 
@@ -84,15 +85,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font-family: var(--Inter);
+  font-family: var(--main-font);
   border: 2px solid #000;
   max-width: 696px;
   background-color: white;
-  overflow: hidden;
 }
 
+/*Из-за блюра сам блюр выходит из своих границ, как можно его ограничить.*/
+
 .title_card {
-  font-family: var(--Inter);
+  font-family: var(--main-font);
   font-weight: bold;
   font-size: 18px;
 
@@ -142,13 +144,13 @@
 
 .text_img {
   position: absolute;
-  font-family: var(--PressStart2P);
+  font-family: var(--decorative-font);
   font-size: 14px;
   text-shadow: 0px 0px 3px #fff;
   right: var(--right__text_img);
   top: 25px;
   mix-blend-mode: hard-light;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 @supports (-webkit-text-stroke: 0.26px #fff) or (text-stroke: 0.26px #fff) {
@@ -208,7 +210,7 @@
   font-weight: normal;
   background-color: #fff;
   border: 2px solid black;
-  font-family: var(--PressStart2P);
+  font-family: var(--decorative-font);
   position: relative;
   transition: box-shadow 0.3s;
   overflow: hidden;
@@ -360,7 +362,7 @@
 
 /*footer*/
 
-.footer {
+.dialog-card {
   padding-block-start: var(--padding-block-start__footer);
   padding-block-end: 100px;
   display: flex;
@@ -369,7 +371,7 @@
   flex-direction: var(--flex-direction__footer); /*flex-direction__footer*/
 }
 
-.button_footer {
+.button_dialog-card {
   flex-direction: var(--flex-direction__footer);
   gap: 7px;
   border: 2px solid black;
@@ -378,17 +380,13 @@
   padding-block: 16px;
 }
 
-.svg_footer {
+.svg_dialog-card {
   inline-size: var(--inline-size__svg_footer);
   z-index: 2;
   color: var(--main-color);
   mix-blend-mode: difference;
 }
 
-.text_footer {
-  font-size: 14px;
-  line-height: 16.5px;
-}
 /*-footer-*/
 /*dialog*/
 
@@ -397,7 +395,6 @@
   flex-direction: column;
   gap: 20px;
   width: clamp(21.313rem, 16.949rem + 21.818vw, 22.063rem);
-  height: 191px;
   padding: 30px var(--padding-inline__dialog__content);
   border: 2px solid black;
   background-color: white;
@@ -408,7 +405,7 @@ body:has(.dialog[open]) {
 }
 
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.25);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog[open] .dialog__icon {
@@ -425,7 +422,7 @@ dialog::backdrop {
 }
 
 .dialog[open] .dialog__title {
-  font-family: var(--PressStart2P);
+  font-family: var(--decorative-font);
   font-size: 14px;
   line-height: 21px;
 }
@@ -437,7 +434,7 @@ dialog::backdrop {
 
 .dialog[open] .dialog__button span {
   cursor: pointer;
-  font-family: var(--PressStart2P);
+  font-family: var(--decorative-font);
   font-size: 14px;
   line-height: 12.6px;
 }
